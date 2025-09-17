@@ -1,4 +1,4 @@
-![WhatsApp Image 2025-09-17 at 15 54 41_a7c1a263](https://github.com/user-attachments/assets/3b29043b-9958-4cb0-8a4e-f6d6524927cf)# EXP1: 4 Bit Adder functionality verification
+# EXP1: 4 Bit Adder functionality verification
 
 ## Aim:
 To write a verilog code for 4bit adder and verify the functionality using Test bench.
