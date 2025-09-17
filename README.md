@@ -3,10 +3,6 @@
 ## Aim:
 To write a verilog code for 4bit adder and verify the functionality using Test bench.
 
- Write Verilog Code
-
- Verify the Functionality using Test-bench.
-
 ## Tool Required: 
 Functional Simulation: nclaunch Simulator (nclaunch) 
 
@@ -15,11 +11,13 @@ To construct a 4-bit adder, need to chain together four 1-bit full adders. Each 
 
 To design a 1-bit full adder, the first step is to create a truth table that represents all possible combinations of the inputs (A, B, and CIN) and the corresponding outputs (Sum(S) and COUT).
 
-![image](https://github.com/user-attachments/assets/716a26b6-a449-42e0-9e2d-cdbaa4b291b9)
+![image]![WhatsApp Image 2025-09-17 at 15 44 34_feca8338](https://github.com/user-attachments/assets/5391d2ab-56b7-4812-b176-2b504f81aa8b)
+
 
 Here’s the truth table for a 1-bit full adder:
 
-![tt](https://github.com/user-attachments/assets/0b3ab24f-1d7e-4a01-80ce-5e7406f4082b)
+![tt]![WhatsApp Image 2025-09-17 at 15 44 47_6a10011f](https://github.com/user-attachments/assets/f081e536-ebfc-4210-bec6-bfeb15c6b16d)
+
 
 ### Fig 1 : Diagram and truth table of full adder
 
@@ -35,7 +33,8 @@ Where ⊕ represents XOR.
    
 COUT=(A&B) | (CIN&(A^B))
 
-![image](https://github.com/user-attachments/assets/7d6fa554-2614-4f19-aa68-65c9e6153caa)
+![image]![WhatsApp Image 2025-09-17 at 15 54 47_973631fb](https://github.com/user-attachments/assets/b909a334-d912-407e-91ae-441522080f1e)
+
 
 ### Fig 2:Diagram of 4 Bit Adder
 
@@ -71,6 +70,8 @@ Developed by: Register Number*/
       (The path of cshrc could vary depending on the installation destination)
       
 	After this you can see the window like below 
+![WhatsApp Image 2025-09-17 at 15 45 12_5ab2fae4](https://github.com/user-attachments/assets/53b2e91e-1f30-404d-9f0d-8347ae8d457d)
+
 
 ### Fig 3:Invoke the Cadence Environment
 
@@ -83,12 +84,18 @@ or
 •	linux:/> nclaunch& // On subsequent calls to NCVERILOG 
 
 	It will invoke the nclaunch window for functional simulation we can compile,elaborate and simulate it using Multiple Step .
+![WhatsApp Image 2025-09-17 at 15 45 43_3ac4e110](https://github.com/user-attachments/assets/bf70f25f-8791-44ac-bdc3-bea88df25310)
+
 
 ### Fig 4:Setting Multi-step simulation
 
 	Select Multiple Step and then select “Create cds.lib File” .
 
 	Click the cds.lib file and save the file by clicking on Save option 
+
+
+![WhatsApp Image 2025-09-17 at 15 45 59_a396b80a](https://github.com/user-attachments/assets/01b4b925-0107-4150-b8d7-9de56b5f2541)
+
 
 ### Fig 5:cds.lib file Creation
 
@@ -100,7 +107,8 @@ or
 
 •	A Click “OK” in the “nclaunch: Open Design Directory” window as shown in below figure 
 
-![image](https://github.com/user-attachments/assets/781b297a-11e9-4140-89c5-ee3b0d15bbd4)
+![image]![WhatsApp Image 2025-09-17 at 15 57 33_bd6c2abd](https://github.com/user-attachments/assets/a5e297a7-e824-4d65-a8b2-c9f5ecc99f8b)
+
 
 ### Fig 6: Selection of Don’t include any libraries
 
@@ -111,6 +119,8 @@ or
 	Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation .
 
 	To perform the function simulation, the following three steps are involved Compilation, Elaboration and Simulation. 
+![WhatsApp Image 2025-09-17 at 15 58 35_d46393e4](https://github.com/user-attachments/assets/03b814f7-dc01-48bf-9dce-994724ebca81)
+
 
 ### Fig 7: Nclaunch Window
 
@@ -131,6 +141,8 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 
 Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation
 
+![WhatsApp Image 2025-09-17 at 15 46 17_21896129](https://github.com/user-attachments/assets/4f50425a-c0ac-4f2e-8a0e-e61eb6a0d946)
+
 ### Fig 8: Compiled database in worklib
 
 	After compilation it will come under worklib you can see in right side window
@@ -138,6 +150,8 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 	Select the test bench and compile it. It will come under worklib. Under Worklib you can see the module and test-bench. 
 
 	The cds.lib file is an ASCII text file. It defines which libraries are accessible and where they are located. It contains statements that map logical library names to their physical directory paths. For this Design, you will define a library called “worklib”
+
+![WhatsApp Image 2025-09-17 at 16 06 16_1e13bf42](https://github.com/user-attachments/assets/600f511d-d717-4759-9430-79f760f8db77)
 
 ## Step 2: Elaboration:– To check the port connections in hierarchical design 
 	Inputs: Top level design / test bench Verilog codes 
@@ -165,12 +179,21 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 	Simulation allow to dump design and test bench signals into a waveform 
 
 	Steps for simulation – Run the simulation command with simulator options
+![WhatsApp Image 2025-09-17 at 15 47 05_1d2a346d](https://github.com/user-attachments/assets/45d923e4-851d-4a5f-aeed-97d4f4b976ac)
+
 
 ### Fig 10: Design Browser window for simulation
+![WhatsApp Image 2025-09-17 at 15 47 18_46ee6693](https://github.com/user-attachments/assets/b39394a0-fb2a-4e0e-9086-202447b9ce23)
+
 
 ### Fig 11: Launching Simulation Waveform WindowSimulation Waveform Window
 
+![WhatsApp Image 2025-09-17 at 15 47 30_4446328e](https://github.com/user-attachments/assets/ee49e3c3-5ed2-4969-a04f-3652ccda6ea6)
+
 ### Fig 12: Simulation Waveform Window
+
+![WhatsApp Image 2025-09-17 at 15 47 30_b527f9c2](https://github.com/user-attachments/assets/142e2007-46d5-4b1a-8e34-df3309241c3e)
+
 
 ### Result:
 
