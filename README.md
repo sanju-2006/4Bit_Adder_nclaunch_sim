@@ -11,12 +11,12 @@ To construct a 4-bit adder, need to chain together four 1-bit full adders. Each 
 
 To design a 1-bit full adder, the first step is to create a truth table that represents all possible combinations of the inputs (A, B, and CIN) and the corresponding outputs (Sum(S) and COUT).
 
-[WhatsApp Image 2025-09-17 at 15 44 34_feca8338](https://github.com/user-attachments/assets/5391d2ab-56b7-4812-b176-2b504f81aa8b)
+![image]![WhatsApp Image 2025-09-17 at 15 44 34_feca8338](https://github.com/user-attachments/assets/5391d2ab-56b7-4812-b176-2b504f81aa8b)
 
 
 Here’s the truth table for a 1-bit full adder:
 
-[WhatsApp Image 2025-09-17 at 15 44 47_6a10011f](https://github.com/user-attachments/assets/f081e536-ebfc-4210-bec6-bfeb15c6b16d)
+![image]![WhatsApp Image 2025-09-17 at 15 44 47_6a10011f](https://github.com/user-attachments/assets/f081e536-ebfc-4210-bec6-bfeb15c6b16d)
 
 
 ### Fig 1 : Diagram and truth table of full adder
