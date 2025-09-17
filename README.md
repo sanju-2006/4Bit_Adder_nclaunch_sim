@@ -1,4 +1,4 @@
-# EXP1: 4 Bit Adder functionality verification
+![WhatsApp Image 2025-09-17 at 15 54 41_a7c1a263](https://github.com/user-attachments/assets/3b29043b-9958-4cb0-8a4e-f6d6524927cf)# EXP1: 4 Bit Adder functionality verification
 
 ## Aim:
 To write a verilog code for 4bit adder and verify the functionality using Test bench.
@@ -15,11 +15,13 @@ To construct a 4-bit adder, need to chain together four 1-bit full adders. Each 
 
 To design a 1-bit full adder, the first step is to create a truth table that represents all possible combinations of the inputs (A, B, and CIN) and the corresponding outputs (Sum(S) and COUT).
 
-![image](https://github.com/user-attachments/assets/716a26b6-a449-42e0-9e2d-cdbaa4b291b9)
+![image]![WhatsApp Image 2025-09-17 at 15 44 33_acfa5860](https://github.com/user-attachments/assets/a528c28d-ec20-475d-a97f-1a7bd72c72e4)
+
 
 Here’s the truth table for a 1-bit full adder:
 
-![tt](https://github.com/user-attachments/assets/0b3ab24f-1d7e-4a01-80ce-5e7406f4082b)
+![tt]![WhatsApp Image 2025-09-17 at 15 44 47_7d10f8a0](https://github.com/user-attachments/assets/a72a1512-64a8-4f9c-bb9e-de83423961c3)
+
 
 ### Fig 1 : Diagram and truth table of full adder
 
@@ -35,7 +37,8 @@ Where ⊕ represents XOR.
    
 COUT=(A&B) | (CIN&(A^B))
 
-![image](https://github.com/user-attachments/assets/7d6fa554-2614-4f19-aa68-65c9e6153caa)
+![image]![WhatsApp Image 2025-09-17 at 15 54 41_a7c1a263](https://github.com/user-attachments/assets/4e2fb640-704d-4d9c-a46a-efc6d5fbadf6)
+
 
 ### Fig 2:Diagram of 4 Bit Adder
 
@@ -72,23 +75,29 @@ Developed by: Register Number*/
       
 	After this you can see the window like below 
 
+![WhatsApp Image 2025-09-17 at 15 45 13_f217f4b0](https://github.com/user-attachments/assets/31264ead-9532-4119-af3b-d4948932add8)
+
+
+
 ### Fig 3:Invoke the Cadence Environment
 
 	To Launch Simulation tool 
 
 •	linux:/> nclaunch -new& // “-new” option is used for invoking NCVERILOG for the first time for any design 
-
 or
-
 •	linux:/> nclaunch& // On subsequent calls to NCVERILOG 
 
 	It will invoke the nclaunch window for functional simulation we can compile,elaborate and simulate it using Multiple Step .
+![WhatsApp Image 2025-09-17 at 15 46 19_896793d8](https://github.com/user-attachments/assets/03b1d249-ba4f-403f-b954-9df8f5819f6e)
+
 
 ### Fig 4:Setting Multi-step simulation
 
 	Select Multiple Step and then select “Create cds.lib File” .
 
 	Click the cds.lib file and save the file by clicking on Save option 
+![WhatsApp Image 2025-09-17 at 15 45 59_db2ccb82](https://github.com/user-attachments/assets/2baa39aa-1da9-4738-8460-c00a73f888e5)
+
 
 ### Fig 5:cds.lib file Creation
 
@@ -100,7 +109,8 @@ or
 
 •	A Click “OK” in the “nclaunch: Open Design Directory” window as shown in below figure 
 
-![image](https://github.com/user-attachments/assets/781b297a-11e9-4140-89c5-ee3b0d15bbd4)
+![image]!![WhatsApp Image 2025-09-17 at 15 57 26_ba7abccf](https://github.com/user-attachments/assets/e14a0fb8-b634-452e-bebc-0c6af7875610)
+
 
 ### Fig 6: Selection of Don’t include any libraries
 
@@ -111,6 +121,8 @@ or
 	Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation .
 
 	To perform the function simulation, the following three steps are involved Compilation, Elaboration and Simulation. 
+![WhatsApp Image 2025-09-17 at 15 58 28_a180341b](https://github.com/user-attachments/assets/ecd6c2d7-2ccd-4082-80bd-464d1618142d)
+
 
 ### Fig 7: Nclaunch Window
 
@@ -130,6 +142,8 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 Left side select the file and in Tools : launch verilog compiler with current selection will get enable. Click it to compile the code 
 
 Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation
+![WhatsApp Image 2025-09-17 at 15 46 16_46903f65](https://github.com/user-attachments/assets/0197b5b0-61e2-4541-bf1c-465b4bc95cac)
+
 
 ### Fig 8: Compiled database in worklib
 
@@ -138,6 +152,7 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 	Select the test bench and compile it. It will come under worklib. Under Worklib you can see the module and test-bench. 
 
 	The cds.lib file is an ASCII text file. It defines which libraries are accessible and where they are located. It contains statements that map logical library names to their physical directory paths. For this Design, you will define a library called “worklib”
+![WhatsApp Image 2025-09-17 at 16 06 01_c19155c1](https://github.com/user-attachments/assets/05b4e7aa-e502-4dbb-80ea-773a218a12a4)
 
 ## Step 2: Elaboration:– To check the port connections in hierarchical design 
 	Inputs: Top level design / test bench Verilog codes 
@@ -154,6 +169,7 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
    
 	After elaboration the file will come under snapshot. Select the test bench and elaborate it.
 
+
 ### Fig 9: Elaboration Launch Option
 
 ## Step 3: Simulation: – Simulate with the given test vectors over a period of time to observe the output behaviour. 
@@ -165,12 +181,20 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 	Simulation allow to dump design and test bench signals into a waveform 
 
 	Steps for simulation – Run the simulation command with simulator options
+![WhatsApp Image 2025-09-17 at 15 47 04_3d1a0931](https://github.com/user-attachments/assets/4914cd8b-9a73-487b-a62c-274ecb03b494)
+
 
 ### Fig 10: Design Browser window for simulation
+![WhatsApp Image 2025-09-17 at 15 47 30_26b6879b]![WhatsApp Image 2025-09-17 at 16 18 31_8694d98e](https://github.com/user-attachments/assets/c1fcfe8c-43d2-4bc5-ad50-850045ca177a)
+
 
 ### Fig 11: Launching Simulation Waveform WindowSimulation Waveform Window
+![WhatsApp Image 2025-09-17 at 15 47 30_26b6879b](https://github.com/user-attachments/assets/c2a4c45b-c104-4d5c-936e-31fb07bed63e)
+
 
 ### Fig 12: Simulation Waveform Window
+![WhatsApp Image 2025-09-17 at 15 47 30_26b6879b](https://github.com/user-attachments/assets/eb28f11d-d45e-4051-8bb8-5011fd873c65)
+
 
 ### Result:
 
